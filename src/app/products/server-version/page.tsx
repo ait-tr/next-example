@@ -9,7 +9,7 @@ export default async function ProductsServerVersion() {
     throw new Error("Products failed to fetch");
   }
   const products = await res.json();
-  console.log(products);
+  // console.log(products);
   return (
     <div>
       {products.map((product: Product) => (

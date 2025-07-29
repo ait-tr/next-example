@@ -9,4 +9,14 @@ export const sportsTable = pgTable("sports", {
 });
 
 // npx drizzle-kit push
+// sequelize
 // supabase postgres
+
+// создаешь таблицу/изменения -> generate (сгенирует файлы миграций) -> migrate (изменить)
+// npm run generate
+
+export const eventsTable = pgTable("events", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  name: varchar({ length: 100 }).notNull(),
+  description: varchar({ length: 255 }).notNull(),
+});

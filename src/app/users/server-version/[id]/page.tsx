@@ -9,7 +9,7 @@ export default async function UserInfo({
 }) {
   const id = (await params).id;
   const res = await fetch(`https://api.escuelajs.co/api/v1/users/${id}`);
-  console.log("ID: ", id);
+  // console.log("ID: ", id);
   if (!res.ok) {
     if (res.status === 404 || res.status === 400) {
       notFound();
