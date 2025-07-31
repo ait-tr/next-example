@@ -26,3 +26,11 @@ export interface Product {
   category: Category;
   images: string[];
 }
+
+
+export interface Todo {
+  id: number;
+  text: string;
+  userId: string;
+  createdAt: string;
+}

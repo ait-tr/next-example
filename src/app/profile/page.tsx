@@ -1,5 +1,5 @@
+import { authOptions } from "@/lib/auth/authOptions";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
 import Image from "next/image";
 
 export default async function Profile() {
@@ -9,7 +9,6 @@ export default async function Profile() {
     <div>
       <h2>User profile </h2>
       <p>{session?.user?.email}</p>
-
       <Image
         src={session?.user?.image || ""}
         alt="avatar"

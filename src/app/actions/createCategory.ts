@@ -8,7 +8,7 @@ export async function createCategory(formData: FormData) {
   const image = formData.get("image")?.toString();
   // валидация
   // console.log(name, image);
-  const res = await fetch("https://api.escuelajs.co/api/v1/categories", {
+  await fetch("https://api.escuelajs.co/api/v1/categories", {
     method: "POST",
     body: JSON.stringify({ name, image }),
     headers: {
@@ -17,5 +17,5 @@ export async function createCategory(formData: FormData) {
   });
   // сохранение в базу
   revalidateTag("categories");
-  redirect("/categories")
+  redirect("/categories");
 }

@@ -8,7 +8,8 @@ declare module "next-auth" {
       email?: string | null;
       image?: string | null;
       googleId?: string | null;
-    //   hello: string;
+      role?: string | null;
+      //   hello: string;
     };
   }
 }
@@ -16,5 +17,6 @@ declare module "next-auth" {
 declare module "next-auth/jwt" {
   interface JWT {
     googleId?: string | null;
+    role?: string | null;
   }
 }
